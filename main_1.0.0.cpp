@@ -31,15 +31,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ******************************************************************************/
 
 #include "simple_svg_1.0.0.hpp"
-
+#include <string>
 using namespace svg;
-
+using namespace std;
 // Demo page shows sample usage of the Simple SVG library.
 
-int main()
+void makeSvgDocument(const string &fileName= "my_svg.svg")
 {
     Dimensions dimensions(100, 100);
-    Document doc("my_svg.svg", Layout(dimensions, Layout::BottomLeft));
+    Document doc(fileName, Layout(dimensions, Layout::BottomLeft));
 
     // Red image border.
     Polygon border(Stroke(1, Color::Red));
